@@ -1,0 +1,1253 @@
+#IF/ELSE & SWITCH
+
+#Завдання 1. Максимум із двох чисел
+#Дано два цілих числа, кожне число записано в окремому рядку. Виведіть найбільше з цих чисел.
+int a;
+		int b; 
+		a=2;
+		b=1;
+		
+		if(a<b) {
+			System.out.println(b);
+		}else if(a>b) {
+			System.out.println(a);
+		}else {
+			System.out.println("Вони дорівнюють одне одному");
+           }
+#Завдання 2. Високосний рік
+#Потрібно визначити, чи цей рік є високосним. (Нагадаємо, що рік є високосним, якщо його номер кратний 4, але не кратний 100, а також якщо він кратний 400.)
+Вводиться однина - номер року (ціле, позитивне, не перевищує 30000). Потрібно вивести слово YES, якщо рік є високосним і NO - інакше.
+             int y;
+		y=2022;
+		if(( y % 4 == 0 ) && (y % 100 != 0)){
+			System.out.println("Yes");
+		}else if(y % 400 == 0) {
+			System.out.println("Yes");
+		}else {
+			System.out.println("No");
+		}
+#Завдання 3. Тестуюча система
+#В одній із завдань на цьому сайті написано: “Якщо дане чотиризначне число є симетричним, виведіть 1, інакше виведіть будь-яке інше ціле число”. Для перевірки завдання використовуються
+заздалегідь підготовлені приклади та правильні відповіді на них
+Школяру здається, що він вирішив це завдання, але система, що тестує, чомусь не приймає його рішення. Школяр думає, що це відбувається тому, що він виводить не те інше число, яке записано
+в правильних відповідях.
+Напишіть програму, яка за відповіддю, записаною в системі тестування та за відповіддю школяра визначає, чи правильно школяр вирішив завдання.
+Вхідні дані
+Програма отримує на вхід два числа: відповідь, записана в системі тестування та відповідь
+школяра.
+Вихідні дані
+Програма повинна вивести YES, якщо школяр дав правильну відповідь і NO інакше.
+int a;
+	    int b;
+	    a=3;
+	    b=1;
+	    if(b !=1) {
+	      System.out.println("YES");
+	    }else {
+	      System.out.println("NO");
+		}
+#Завдання 4. Знак числа
+#У математиці функцію sign(x) (знак числа) визначено так:
+sign(x) = 1, якщо x > 0,
+sign(x) = -1, якщо x < 0,
+sign(x) = 0 якщо x = 0.
+Для цього числа x виведіть значення sign(x).
+Вхідні дані
+Запроваджується число x.
+Вихідні дані
+Виведіть відповідь на завдання.
+public class MathDemo {
+	public static void main(String[] args) {
+		int x;
+		x=-3;
+		if(x>0) {
+			System.out.println(Math.signum(x));
+		}else if (x<0) {
+			System.out.println(Math.signum(x));	
+		}else {
+			System.out.println(0);
+		}
+#Завдання 5. Яке з чисел більше?
+#Дано два цілих числа, кожне записано в окремому рядку.
+Вихідні дані
+Програма повинна вивести число 1, якщо перше число більше за друге, число 2, якщо друге більше першого, або число 0, якщо вони рівні.
+             int a;
+		int b;
+		a=6;
+		b=7;
+		if(a > b) {
+			System.out.println(1);
+		}else if(b > a) {
+			System.out.println(2);
+		}else {
+			System.out.println(0);
+		}
+#Завдання 6. Максимум із трьох
+#Дано три цілих числа, кожне записано в окремому рядку.
+Вихідні дані
+Виведіть найбільше з цих чисел (програма повинна вивести одне ціле число)
+             int a;
+		int b;
+		int c;
+		a=2;
+		b=3;
+		c=1;
+		if((c>a) && (c>b)) {
+			System.out.println(c);
+		}else if((a>b) && (a>c)) {
+			System.out.println(a);
+		}else {
+			System.out.println(b);
+		}
+#Завдання 7. Ладья
+#Потрібно визначити, чи б'є човна, що стоїть на клітці із зазначеними координатами (номер рядка та номер стовпця), фігуру, що стоїть на іншій вказаній клітці.
+Вхідні дані
+Вводяться чотири числа: координати човни (два числа) та координати іншої фігури (два числа), кожне число вводиться в окремому рядку. Координати – цілі числа в інтервалі від 1 до 8.
+Вихідні дані
+Потрібно вивести слово YES, якщо тура зможе побити фігуру за 1 хід і NO - інакше.
+int a;
+		int b;
+		int c;
+		int d;
+		a=2;
+		b=2;
+		c=1;
+		d=2;
+		if((a==c) && (c==d)) {
+			System.out.println("YES");
+		}else if((a==b) && (b==d)) {
+			System.out.println("YES");
+		}else if((a==c) && (c==b)) {
+			System.out.println("YES");
+		}else if((b==c) && (c==d)) {
+			System.out.println("YES");
+		}else if((a==b) &&  (b==c)) {
+			System.out.println("YES");
+		}else {
+			System.out.println("NO");
+		}
+#Завдання 8. Слон
+#Потрібно визначити, чи б'є слон, що стоїть на клітці із зазначеними координатами (номер рядка та номер стовпця), фігуру, що стоїть на іншій вказаній клітці.
+Вхідні дані
+Вводяться чотири числа: координати слона та координати іншої фігури. Координати – цілі числа в інтервалі від 1 до 8.
+Вихідні дані
+Потрібно вивести слово YES, якщо слон здатний побити фігуру за 1 хід, інакше вивести слово NO
+int a;
+		int b;
+		int c;
+		int d;
+		a=2;
+		b=2;
+		c=1;
+		d=1;
+		if((a==b) && (c==d)) {
+			System.out.println("YES");
+		}else {
+			System.out.println("NO");
+		}
+#Завдання 9. Ферзь
+#Потрібно визначити, чи б'є ферзь, що стоїть на клітці із зазначеними координатами (номер рядка та номер стовпця), фігуру, що стоїть на іншій вказаній клітці.
+Вхідні дані
+Вводяться чотири числа: координати ферзя та координати іншої фігури. Координати – цілі числа в інтервалі від 1 до 8.
+Вихідні дані
+Потрібно вивести слово YES, якщо ферзь може побити фігуру за 1 хід, інакше вивести слово NO
+int x1;
+			int y1;
+			int x2;
+			int y2;
+			x1=2;
+			y1=2;
+			x2=2;
+			y2=1;
+			if((x1==x2) && (x2==y2)) {
+				System.out.println("YES");
+			}else if((x1==y1) && (y1==y2)) {
+				System.out.println("YES");
+			}else if((x1==x2) && (x2==y1)) {
+				System.out.println("YES");
+			}else if((y1==x2) && (x2==y2)) {
+				System.out.println("YES");
+			}else if((x1==y1) &&  (y1==x1)) {
+				System.out.println("YES");
+			}else {
+				System.out.println("NO");
+			}
+#Завдання 10. Король
+#Поле шахівниці визначається парою чисел (a, b), кожне від 1 до 8, перше число задає номер стовпця, друге – номер рядка. Задано дві клітки. Визначте, чи шаховий король може потрапити з
+першої клітини на другу за один хід.
+Вхідні дані
+Дано 4 цілих числа від 1 до 8 кожне, перші два задають початкову клітину, другі два задають кінцеву клітину. Початкова та кінцева клітини не збігаються. Числа записані в окремих рядках.
+Вихідні дані
+Програма повинна вивести YES, якщо з першої клітини ходом короля можна потрапити до другої, або NO інакше.
+int x1;
+			int y1;
+			int x2;
+			int y2;
+			x1=3;
+			y1=3;
+			x2=4;
+			y2=4;
+			if((x2==x1+1) && (y2==y1+1)) {
+				System.out.println("YES");
+			}else {
+				System.out.println("NO");
+			}
+#Завдання 11. Кінь
+#Потрібно визначити, чи б'є кінь, що стоїть на клітці із зазначеними координатами (номер рядка та
+номер стовпця), фігуру, що стоїть на іншій вказаній клітці.
+Вхідні дані
+Вводяться чотири числа: координати коня та координати іншої фігури. Усі координати – цілі числа
+в інтервалі від 1 до 8.
+Вихідні дані
+Програма має вивести слово YES, якщо кінь може побити фігуру за 1 хід, інакше вивести слово NO.
+int x1;
+			int y1;
+			int x2;
+			int y2;
+			x1=1;
+			y1=1;
+			x2=3;
+			y2=2;
+			if((x2==x1+2) && (y2==y1+1)) {
+				System.out.println("YES");
+			}else if((x2==x1-2) && (y2==y1-1)) {
+				System.out.println("YES");
+			}else {
+				System.out.println("NO");
+			}
+#Завдання 12. Шоколадка
+#Потрібно визначити, чи можна від шоколадки розміром n × m часточок відламати k часточок, якщо дозволяється зробити один розлом по прямій між часточками (тобто розламати шоколадку на два
+прямокутники).
+Вхідні дані
+Вводяться 3 числа: n, m та k; k не дорівнює n×m. Гарантується, що кількість часточок у шоколадці вбирається у 30000.
+Вихідні дані
+Програма повинна вивести слово YES, якщо можна відламати вказану кількість часточок, інакше вивести слово NO.
+int n;
+			int m;
+			int k;
+			n=3;
+			m=2;
+			k=4;
+			
+			if ((k < n * m) && ((k % n == 0) || (k % m == 0))) {
+				System.out.println("YES");
+			}else {
+				System.out.println("NO");
+			}
+#Завдання 13. Фішки
+#Кожну крайню клітку квадратної дошки поставили по фішці. Чи могло виявитися, що виставлено рівно фішок? (Наприклад, якщо дошка 2х2, то виставлено 4 фішки, а якщо 6х6 - то 20).
+Вхідні дані
+Вводиться одне натуральне число k, що не перевищує 30000
+Вихідні дані
+Програма повинна вивести слово YES, якщо існує такий розмір дошки, на який буде виставлено рівно (не більше, і не менше) k фішок, інакше - вивести слово NO.
+int k;
+		    k=20;
+		    if (k%2==0) {
+				System.out.println("YES");
+			}else {
+				System.out.println("NO");
+			}
+#Завдання 14. Рівняння
+#Розв'язати у цілих числах рівняння ax + b = 0.
+Вхідні дані
+Вводяться 2 цілих числа: a та b.
+Вихідні дані
+Необхідно вивести всі рішення, якщо їх кількість звичайно, "NO" (без лапок), якщо рішень немає, і "INF" (без лапок), якщо рішень нескінченно багато.
+int a, b;
+		    float x;
+		    a = 6;
+		    b = -2;
+		    if(a!=0){
+		    x = (float)-b/(float)a;
+		      System.out.println(x);
+		    }else if(b==0) {
+		      System.out.println("INF");
+		    }else {
+		      System.out.println("NO");
+		    }      
+#Завдання 15. Складне рівняння
+#Розв'язати у цілих числах рівняння ( ax + b ) : ( cx + d ) = 0.
+Вхідні дані
+Вводяться 4 числа: a, b, c та d; c і d не дорівнюють нулю одночасно.
+Вихідні дані
+Необхідно вивести всі цілі рішення, якщо їх число звичайно, "NO" (без лапок), якщо цілих рішень немає, і "INF" (без лапок), якщо їх нескінченно багато.
+int a, b, c, d;
+		    float x;
+		    a = 2;
+		    b = -4;
+		    c = 7;
+		    d = 1;
+		    x = (float)-b/(float)a;
+		    if(((c * x + d) == 0)||(x - (int)x !=0)){
+		    System.out.println("NO");
+		    }else if((a==0)&&(b==0)) {
+		    System.out.println("INF");
+		    }else {
+		    System.out.println((int)x);
+		    }  
+#Завдання 16. Решта
+#Товар коштує a руб. b коп. За нього заплатили з руб. d коп. Скільки здачі потрібно отримати?
+Вхідні дані
+Вводяться 4 числа: a, b, c та d.
+Вихідні дані
+Потрібно вивести 2 числа: e і f, число рублів і копійок, відповідно.
+int a; int b; int c; int d; int e; int f;
+			a=2;
+			b=17;
+			c=2;
+			d=18;
+			if (b<d) {
+			f=b%100;
+			f=d%100;
+			e=c-a;
+            f=d-b;
+				System.out.println(e + " " + f + " ");
+			}else {
+				System.out.println((c-a) + " " + (d-b));
+			}
+#Завдання 17. Морозиво
+#У кафе морозиво продають по три кульки та по п'ять кульок. Чи можна купити рівно k кульок морозива?
+Вхідні дані
+Вводиться число k (ціле, позитивне)
+Вихідні дані
+Програма повинна вивести слово YES, якщо за таких умов можна набрати рівно k кульок (не більше і не менше), інакше - вивести NO.
+int k;
+		k=3;
+		if(k==3) {
+			System.out.println("YES");
+		}else if (k==5) {
+			System.out.println("YES");	
+		}else {
+			System.out.println("NO");
+		}
+#Завдання 18. Котлети
+#На сковорідку одночасно можна покласти на котлет. Кожну котлету потрібно з кожного боку обсмажувати m хвилин безперервно. За який найменший час вдасться підсмажити по обидва боки
+n котлет?
+Вхідні дані
+Вводяться 3 числа: k, m та n. Усі числа не перевищують 32000.
+Вихідні дані
+Вивести час, за який усі котлети будуть обсмажені.
+int k;//можна покласти котлет
+		int m;//хвилин 
+		int n;
+		k=1;
+		m=5;
+		n=1;
+		if(n<=k) {
+			System.out.println(2 * m);
+		}else if(n*2 % k==0) {
+			System.out.println(m*(n*2 / k));
+		}else {
+			System.out.println(m*(1+(n*2 / k)));
+		}
+#Завдання 19. Кількість рівних із трьох
+#Дано три цілих числа, записаних в окремих рядках. Визначте, скільки з них збігаються.
+Вихідні дані
+Програма повинна вивести одне з чисел: 3 (якщо всі збігаються), 2 (якщо два збігаються) або 0 (якщо всі числа є різними).
+int a;
+		int b;
+		int c;
+		a=6;
+		b=8;
+		c=8;
+		if((a==b) && (b==c) && (a==c)) {
+			System.out.println(3);
+		}else if(a==b) {
+			System.out.println(2);
+		}else if(b==c) {
+			System.out.println(2);	
+		}else if(a==c) {
+			System.out.println(2);	
+		}else {
+			System.out.println(0);
+		}
+#Завдання 20. Корови
+#За цим числом n закінчіть фразу "На лузі пасеться..." одним із можливих продовжень: "n корів", "n корова", "n корови", правильно схиляючи слово "корова".
+Вхідні дані
+Дано число n (n<100).
+Вихідні дані
+Програма повинна вивести введене число n та одне зі слів (на латиниці): коров, корова або корови, наприклад, 1 корова, 2 корови, 5 коров. Між числом і словом має стояти рівно одна
+прогалина.
+             int n;
+		n=2;
+		if(n==1) {
+			System.out.println("1 korova");
+		}else if(n==2) {
+			System.out.println("2 korovy");
+		}else if(n==5) {
+			System.out.println("5 korov");	
+		}else {
+			System.out.println(n+ " " + "korov");
+		}
+    
+    ///////
+    
+#ОПЕРАТОР FOR
+#Завдання 1. Сума квадратів
+#За цим натуральним n обчисліть суму 1^2+2^2+...+n^2.
+Вхідні дані
+Вводиться єдине натуральне число n, що не перевищує 100
+Вихідні дані
+Потрібно вивести обчислену суму.
+int i;
+		    int a=2;
+		    int S=0;
+		    int n=8;
+		    for(i=1; i<=n; i++) {
+		    	S+=Math.pow(i,a);
+			}
+		    System.out.println(S);
+Завдання 2. Факторіал
+#Обчисліть N! ("ен-факторіал") - добуток всіх натуральних чисел від 1 до N (N! = 1∙2∙3∙...∙ N ).
+Вхідні дані
+Вводиться однина N – натуральне, не перевищує 12.
+Вихідні дані
+Виведіть отримане значення N!
+public class FactorialExample {
+	  public static void main(String[] args) {
+	    int i;
+	    int fact;
+	    fact=1;
+	    int n=4;
+	    for(i=1; i<=n; i++) {
+	    	fact=fact*i;
+		}
+	    System.out.println(fact);
+#Завдання 3. Ступінь
+Напишіть програму, яка обчислює 2 N.
+Вхідні дані
+Вводиться ціле неотрицательное число N, яке перевищує 30.
+Вихідні дані
+Виведіть число 2 N.
+int i;
+	    int k = 0;
+	    int n=12;
+	    for(i=1; i<=n; i++) {
+	    	k=2*i;
+	    }
+	    System.out.println(k);
+#Завдання 4. 1/0!+1/1!+1/2!+...
+#За даним натуральним числом N знайдіть суму чисел 1+1/1!+1/2!+1/3!+...+1/N!. Кількість дій має бути пропорційною N.
+Вхідні дані
+Задано однину N
+Вихідні дані
+Необхідно вивести результат обчислення у вигляді дійсного числа з точністю до 5 знаків після коми.
+public class FactorialExample {
+	public static void main(String[] args){
+		int i;
+	    int fact;
+	    fact=1;
+	    int n=4;
+	    for(i=1; i<=n; i++) {
+	    	fact=fact*i/n;
+		}
+	    System.out.println(fact);
+	}
+#Завдання 5. Ступінь
+#За даним дійсним числом a і цілим невід'ємним n обчисліть величину an.
+Вхідні дані
+Вводяться 2 числа - a та n.
+Вихідні дані
+Потрібно вивести значення an.
+int a=2; int n=3;
+	    int k=0;
+	    for(int i = a; i<=100; i++) {
+	    	if(n!=0) {
+	    		k=a+n;
+	    	}
+	    System.out.println(k); 	
+
+	    }
+#Завдання 6. Факторіал
+#За цим натуральним n обчисліть значення n!.
+Вхідні дані
+Вводиться однина n.
+public class FactorialExample {
+	  public static void main(String[] args) {
+	    int i;
+	    int fact;
+	    fact=1;
+	    int n=6;
+	    for(i=1; i<=n; i++) {
+	    	fact=fact*i;
+		}
+	    System.out.println(fact);
+#Завдання 7. Парні числа
+#Вхідні дані
+Вводяться цілі числа a та b. Гарантується, що a не перевищує b
+Вихідні дані
+Виведіть (через пробіл) усі парні числа від a до b (включно).
+int a; int b; 
+		    a = 0;
+		    b = 10;
+		    for(int i = a; i<=b; i++)
+		    {
+		        if(i%2 == 0)
+		        	System.out.println(i);
+	      }
+#Завдання 8. Залишок
+#Вводяться 4 числа: a, b, c та d.
+Вихідні дані
+Виведіть усі числа на відрізку від a до b, що дають залишок c при поділі на d. Якщо таких чисел не існує, нічого виводити не потрібно.
+int a=2; int b=5; int c=0; int d=2; 
+		for(int i=a; i<=b; i++) {
+			  if (i%d == c) 
+		System.out.println(i);
+		}
+#Завдання 9. Квадрати
+#Вводяться цілі числа a та b. Гарантується, що a не перевищує b.
+Вихідні дані
+Виведіть усі числа на відрізку від a до b, що є повними квадратами. Якщо таких чисел немає, нічого виводити не потрібно.
+int a; int b; int k; 
+		    a = 2;
+		    b = 8;
+		    for(int i = a; i<=b; i++)
+		    {
+		    	k=i*i;
+		        	System.out.println(k);		        
+	      }
+#Завдання 10. Цифра в числі
+#Вводяться 2 числа: x та d.
+Вихідні дані
+Підрахуйте та виведіть одне число – скільки разів зустрічається у записі натурального числа x цифра d.
+int x = 121; int d = 1;
+		int i = 0;
+		do {
+	        if ((x % 10) == d) 
+	        	i++;
+	    } while ((x/=10) > 0); 
+		System.out.println(i);
+#Завдання 11. Сума цифр
+#Запроваджується натуральне число x.
+Вихідні дані
+Виведіть суму цифр числа x.
+int n;
+		    int s=0;
+		    n=234;
+		    while (n!=0)
+		    {
+		        s += n%10;
+		        n /= 10;
+		    }	
+		        	System.out.println(s);
+#Завдання 12. Переверни число
+#Вводиться натуральне число x
+Вихідні дані
+Виведіть число, яке складається із цифр даного числа x у зворотному порядку. Провідні нулі виводити не потрібно.
+int x=7532; int d;
+	    int x1=0; 
+	    while (x>0) {
+	    	d = x % 10;
+	    	x = x / 10;
+	    	x1 = x1 * 10;
+	    	x1 = x1 + d; 
+	    System.out.println(x1); 	        
+	    }
+#Завдання 13. Мінімальний дільник
+#Знайдіть найменший натуральний дільник числа x, відмінний від 1 (2<=x<=30000).
+Вхідні дані
+Запроваджується натуральне число x.
+Вихідні дані
+Виведіть найменший дільник числа x, відмінний від 1.
+int x; 
+		    int i=1;
+		    x=4;
+		    while (i <= x) {
+		        i = i + 1;
+		        if (x % i == 0) {
+		        	System.out.println(i);
+		        	break;
+		        }  			       
+	      }
+#Завдання 14. Дільники числа
+#Виведіть усі натуральні дільники числа x у порядку зростання (включаючи 1 і саме число).
+int x; 
+		    int i=0;
+		    x=16;
+		    while (i <= x) {
+		        i = i + 1;
+		        if (x % i == 0) {
+		        	System.out.println(i);		        	
+		        }  			       
+	      }
+#Завдання 15. Кількість дільників
+#Підрахуйте кількість натуральних дільників числа x (включаючи 1 і саме число; x≤2∗109).
+int x; 
+	    int i=0;
+	    x=6;
+	    int k=0;
+	    while (i <= x) {
+	        i = i + 1;
+	        if (x % i == 0) {
+	        	k = k + 1;
+	        }  	
+      }
+	    System.out.println(k);
+#Завдання 16. Сума ста
+#Обчисліть суму даних 100 натуральних чисел.
+int n; 
+		    n=100;
+		    int i;
+		    int s=0;
+		    for(i=1; i<=n; i++) {
+		    	s=s+i;
+		        	System.out.println(s);		        	
+		        }  	
+#Завдання 17. Сума чисел
+#Обчисліть суму даних N натуральних чисел.
+Вхідні дані
+Вводиться число N, потім N чисел, суму яких необхідно обчислити.
+Вихідні дані
+Виведіть однину - суму введених чисел.
+int N=7;
+	    int number=2;
+	    int sum=0;
+	    for (int i = 0; i <N; ++i){
+	        sum += number;
+	    }
+	    System.out.println(sum);
+#Завдання 19. Нулі
+#Вводиться число N, потім N чисел.
+Вихідні дані
+Підрахуйте та виведіть, скільки серед даних N чисел нулів.
+int num_zeroes = 0;
+		int i;
+		for(i=0; i<=num_zeroes; i++) {		
+	    System.out.println(num_zeroes); 	      
+	    }
+#Завдання 20. Підрахунок чисел
+#Підрахуйте, скільки серед даних N чисел нулів, позитивних чисел, негативних чисел.
+Вхідні дані
+Вводиться число N, потім N цілих чисел.
+Вихідні дані
+Необхідно вивести спочатку число нулів, потім число позитивних чи негативних чисел.
+int n=1; 
+		int a=-1;
+		int i;
+		int k = 0;
+		int l = 0;
+		int m = 0;
+		for(i=1; i<=n; i++) {
+			if(a==0) {
+				k = k + 1;
+			}else if(a>0) {
+			    l = l + 1;
+			}else if(a<0) {
+				m = m + 1;
+			}	
+        
+	    }
+		System.out.println(k + " " + l + " " + m); 
+#Завдання 21. Нуль чи не нуль
+#Перевірте, чи серед даних N чисел нулі.
+Вхідні дані
+Вводиться число N, потім N чисел.
+Вихідні дані
+Виведіть YES, якщо серед введених чисел є хоча б один нуль, або NO інакше.
+int n=1; 
+		int a=0;
+		int i;
+		for(i=1; i<=n; i++) {
+			if(a==0) {
+				System.out.println("YES");
+			}else {
+				System.out.println("NO");
+			}	
+        
+	    }
+#Завдання 22. Рівняння за зростанням
+#Вводяться 4 числа: a, b, c та d.
+Вихідні дані
+Знайдіть усі цілі рішення рівняння ax3 + bx2 + cx + d = 0 на відрізку [0,1000] і виведіть їх у порядкузростання.
+Якщо на даному відрізку немає жодного рішення, нічого виводити не потрібно.
+int a=1; int b=-5; int c=6; int d=0;
+		for(int i = 1000; i >= 0; ++i){
+	        if(a * i * i * i + b * i * i + c * i + d == 0) {	   
+	        	System.out.println(i);	
+		}	        
+		}
+#Завдання 23. Рівняння за спаданням
+#Вводяться 4 числа: a, b, c та d.
+Вихідні дані
+Знайдіть усі цілі рішення рівняння ax3 + bx2 + cx + d = 0 на відрізку [0,1000] і виведіть їх у порядку спадання. 
+Якщо на даному відрізку немає жодного рішення, нічого виводити не потрібно.
+int a=1; int b=-5; int c=6; int d=0;
+		for(int i = 1000; i >= 0; --i){
+	        if(a * i * i * i + b * i * i + c * i + d == 0) {
+	        	System.out.println(i);	
+		}	        
+		}
+#Завдання 24. ДНЧЕ-1
+#"ГНЧЕ-1" – складний електронний пристрій, що видає кожну секунду чергове число послідовності
+1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5... Через дорожнечу електронних комплектуючих вам доручено розробити емулятор для цього пристрої.
+Вхідні дані
+Дано кількість секунд (від 1 до 1000000), що працює генератор після включення.
+Вихідні дані
+Результат роботи генератора
+int n=6; int k = 1;
+		for(int i = 0; i < n; ++i){
+	        for(int j = 0; j < k && i < n; ++j){
+	            ++i;
+	            System.out.println(k);
+	        }
+	        --i;
+	        ++k;
+	    }
+
+/////////////////
+
+#WHILE
+
+#Завдання 1. Список квадратів
+#Задано єдине ціле число N
+Вихідні дані
+Необхідно вивести всі точні квадрати натуральних чисел, що не перевищують цього числа N.
+int i; int n=15; int x;
+		i = 1;
+	    x = i * i;
+	    while (x <= n){
+	    	System.out.println(x);
+	        i++;
+	        x = i*i;    
+	    }	
+#Завдання 2. Мінімальний дільник
+#Дане ціле число не менше 2. Виведіть його найменший натуральний дільник, відмінний від 1.
+Вхідні дані
+Запроваджується натуральне число.
+int i; int n=15; 
+		i=2;
+		while(i>1) {
+			if(n%i==0) 
+				System.out.println(i);
+				i++;			
+		}
+#Завдання 3. Список ступенів двійки
+#За цим числом N роздрукуйте всі цілі ступеня двійки, що не перевищують N, у порядку зростання.
+Операцією зведення на ступінь користуватися не можна!
+Вхідні дані
+Запроваджується натуральне число.
+int N = 50;
+	    for(int i=1; i<=50; i=i*2) {
+				System.out.println(i);		
+		}
+#Завдання 4. Точний ступінь двійки
+#Дано натуральне число N. Виведіть слово YES, якщо число N є точним ступенем двійки, або слово NO інакше.
+int N = 4;
+	    for(int i=1; i<=N; i=i*2) 
+	        if(i==N) {
+	    System.out.println("Yes");
+	        }else {
+	        	System.out.println("No");
+	        }
+#Завдання 5. Двійковий логарифм
+#За цим натуральним числом N виведіть таке найменше ціле число k, що 2k≥N.
+int N = 7;
+		  int k = (N)/2;
+		    while (2*k>=N){
+	        }
+		    System.out.println(k);
+#Завдання 6. Ранкова пробіжка
+#Першого дня спортсмен пробіг х кілометрів, а потім він щодня збільшував пробіг на 10% від попереднього значення.
+За даним числом y визначте номер дня, на який пробіг спортсмена становитиме не менше у кілометрів.
+Вхідні дані
+Програма отримує на вхід дійсні числа x та y
+Вихідні дані
+Програма повинна вивести одне натуральне число – номер дня, на який пробіг спортсмена становитиме не менше у кілометрів.
+float x = 10;
+	    float y = 20;
+	    double temp = x; 
+	    int days = 1;
+	    while(temp < y)
+	    {
+	        temp = temp*1.1;
+	        days++;
+	    }
+	    System.out.println(days);
+#Завдання 7. Банківські відсотки
+#Вклад у банку складає х рублів. Щорічно він збільшується на p відсотків, після чого дрібна частина копійок відкидається.
+Щороку сума вкладу стає більшою. Визначте, через скільки років вклад складе щонайменше у рублів.
+Вхідні дані
+Програма отримує на вхід три натуральні числа: x, p, y.
+Вихідні дані
+Програма має вивести одне ціле число.
+int x, y, p, years; 
+		    x = 100;
+		    y = 200;
+		    p = 10;
+		    years = 0;
+		    float percent = 1 + (float)p/100;
+		    int temp = x;
+		    int buff;
+		    while(temp < y)
+		    {
+		        buff =(int)( temp * percent);
+		        temp = buff;
+		        years++;
+		    }
+		    System.out.println(years);
+#Завдання 8. Числа Фібоначчі
+#Послідовність Фібоначчі визначається так:
+φ0=0, φ1=1, ..., φn=φn-1+φn-2.
+По даному числу n визначте n число Фібоначчі φn.
+Вхідні дані
+Запроваджується натуральне число n.
+int fib = 2;
+		    int n = 6;
+		    int buff;
+		    int temp = fib-1;
+		    for(int i=3; i<n; i++)
+		    {
+		        buff = fib;
+		        fib = fib + temp;
+		        temp = buff;
+		    }
+		    if(n==0)
+		        fib = 0;
+		    if(n==1 || n==2)
+		        fib = 1;
+		    System.out.println(fib);
+#Завдання 9. Номер числа Фібоначчі
+#Дано натуральне число A > 1. Визначте, яким числом Фібоначчі воно є, тобто виведіть таке число n, що φn=A. Якщо А не число Фібоначчі, виведіть число -1.
+int A = 8;
+		    int fib, temp1, temp2, n;
+		    fib = 2;
+		    temp1 = 1;
+		    temp2 = 1;
+		    n = 3;
+		    while(fib < A)
+		    {
+		        temp2 = temp1;
+		        temp1 = fib;
+		        fib = temp1 + temp2;
+		        n++;
+		    }
+		    if(fib == A)
+		    	System.out.println(n);
+		    else
+		    {
+		        if(A!=0&&A!=1)
+		        	System.out.println("-1");
+		        if(A==0)
+		        	System.out.println("0");
+		        if(A==1)
+		        	System.out.println("1");
+		    }
+#Завдання 10. Виконавець Роздвічувач
+#Виконавець "Роздвоювач" перетворює натуральні числа. У нього є дві команди: "Відняти 1" і "Поділити на 2", перша команда зменшує число на 1, друга команда зменшує число вдвічі, якщо
+воно парне, інакше відбувається помилка.
+Вхідні дані
+Дано два натуральні числа A і B (A>B).
+Вихідні дані
+Напишіть алгоритм для Розробника, який перетворює число A на число B і містить мінімальне число команд. Команди алгоритму потрібно виводити по одній у рядку, перша команда
+позначається як -1, друга команда як :2.
+int A; int B;
+		A=179; B=20;
+		while(A>B) {
+			System.out.println("-1");
+			if(A % 2 == 0 && B % 2 == 0) 
+				System.out.println(":2");
+				break;
+		}
+#Завдання 11. Виконавець Водолій
+#Виконавець “Водолій” має дві судини, перший об'ємом A літрів, другий об'ємом B літрів, а також кран з водою. Водолій може виконувати такі операції:
+Наповнити посудину A (позначається >A).
+Наповнити посудину B (позначається >B).
+Вилити воду із посудини A (позначається A>).
+Вилити воду із судини B (позначається B>).
+Перелити воду з посудини A в посудину B (позначається як A>B).
+Перелити воду з судини B у посудину A (позначається як B>A).
+Команда переливання з однієї судини в інший призводять до того, що або перший посуд повністю спустошується, або другий посуд повністю наповнюється.
+Вхідні дані
+Програма отримує на вхід три натуральні числа A, B, N, що не перевищують 104.
+Вихідні дані
+Необхідно вивести алгоритм дій Водолія, який дозволяє отримати точно N літрів в одному з судин, якщо ж такого алгоритму не існує, то програма повинна вивести текст Impossible.
+Кількість операцій у алгоритмі має перевищувати 105. Гарантується, що й завдання має рішення, тобто рішення, що містить трохи більше, ніж 105 операцій.
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Name {
+
+	private static final int LIMIT = (int) (1e5 + 10);;
+
+	public static void main(String[] args) throws NumberFormatException, IOException{
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int a = Integer.parseInt(reader.readLine());
+        int b = Integer.parseInt(reader.readLine());
+        int n=Integer.parseInt(reader.readLine());
+        char min = 'A'; char max = 'B';
+        int bV = 0; int aV = 0;
+        int k = 0;
+        boolean doIt = false;
+        do {
+            k++;
+            k++;
+            if (b - bV >= a) 
+            	bV += a;
+            else {
+            	bV = a - (b - bV);
+            	k++;
+            	k++;
+            }
+                if(n == bV) {
+                	doIt = true;
+                    break;
+                }
+            }
+              while (k <= LIMIT);
+		if (doIt)
+        {
+          bV = 0;
+          do
+          {   
+        	  System.out.printf(">%c\n",min);
+        	  System.out.printf("%c>%c\n", min, max);
+            if (b - bV >= a)
+              bV += a;
+            else
+            {
+              bV = a - (b - bV);
+              System.out.printf("%c>\n",max);     
+              System.out.printf("%c>%c\n", min, max); 
+            }
+            if (n == bV)
+              break;
+          }
+          while(true);
+        }
+        else
+        System.out.println("Impossible");
+#Завдання 12. Довжина послідовності
+#Програма отримує послідовність цілих невід'ємних чисел, кожне число записано в окремому рядку. 
+Послідовність завершується числом 0, під час зчитування якого програма має закінчити своєї роботи і вивести кількість членів послідовності (крім завершального числа 0).
+Числа, що йдуть за числом 0, зчитувати не потрібно.
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Name {
+
+	public static void main(String[] args) throws NumberFormatException, IOException{
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int num = -1;
+        boolean doIt = true;
+        while (doIt) {
+            int n = Integer.parseInt(reader.readLine());
+            num +=1;
+            if (n == 0)
+            doIt = false;
+                    }
+        System.out.println(num);
+#Завдання 13. Сума послідовності
+#Визначте суму всіх елементів послідовності, що завершується числом 0. Числа, що йдуть за нулем, не слід зчитувати.
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Name {
+
+	public static void main(String[] args) throws NumberFormatException, IOException{
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int num = 1;
+        int sum = 0;
+        boolean doIt = true;
+        while (doIt) {
+            int n = Integer.parseInt(reader.readLine());
+            num +=1;
+            sum +=n;
+            if (n == 0)
+            doIt = false;
+                    }
+        System.out.println(sum);
+#Завдання 14. Середнє значення послідовності
+#Визначте середнє арифметичне елементів послідовності, що завершується числом 0.
+Число 0 у послідовність не входить. Числа, що йдуть за нулем, не слід зчитувати.
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Name {
+
+	public static void main(String[] args) throws NumberFormatException, IOException{
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int num = -1, summa = 0;
+        boolean doIt = true;
+        while (doIt) {
+            int n = Integer.parseInt(reader.readLine());
+            num +=1;
+            summa +=n;
+            if (n == 0)
+                doIt = false;
+        }
+        System.out.println("Середнє арифметичне елементів послідовності: " + (float)summa/num);
+#Завдання 15. Кількість парних елементів послідовності
+#Визначте кількість парних елементів послідовності, що завершується числом 0.
+Саме число 0, і все, що слідує за ним, враховувати не потрібно.
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Name {
+
+	public static void main(String[] args) throws NumberFormatException, IOException{
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int num = 1;
+        int count = 0;
+        boolean doIt = true;
+        while (doIt) {
+            int n = Integer.parseInt(reader.readLine());
+            if (n == 0)
+            doIt = false;
+            else if (n % 2 == 0)    
+            count++;            
+                    }        
+        System.out.println(count);
+#Завдання 16. Максимум послідовності
+#Послідовність складається із натуральних чисел і завершується числом 0. Визначте значення найбільшого елемента послідовності.
+Числа, що йдуть за нулем, не слід зчитувати.
+import java.io.BufferedReader;
+	import java.io.IOException;
+	import java.io.InputStreamReader;
+
+	public class Name {
+		public static void main(String[] args) throws NumberFormatException, IOException{
+			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+	        int num; 
+	        num = -1;
+	        int max = 0;
+	        boolean doIt = true;
+	        while (doIt) {
+	            int n = Integer.parseInt(reader.readLine());
+	            if (n == 0) {
+	            doIt = false;
+	            }else if (n>max) { 
+	            	num=max;
+	            }
+	        }
+	        System.out.println("Max = " + max);
+#Завдання 17. Кількість елементів, які більші за попередні
+#Послідовність складається з натуральних чисел і завершується числом 0. Визначте, скільки елементів цієї послідовності більше за попередній елемент.
+Числа, що йдуть за числом 0, зчитувати не потрібно.
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Name {
+
+	public static void main(String[] args) throws NumberFormatException, IOException{
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int first_number = Integer.parseInt(reader.readLine());
+        int count = 0;
+        while (first_number!= 0) {
+            int next = Integer.parseInt(reader.readLine());
+            if (next != 0 && first_number < next)    
+            count++;
+            first_number = next;
+                    }       
+        System.out.println(count);
+#Завдання 18. Другий максимум
+#Послідовність складається з різних натуральних чисел і завершується числом 0. Визначте значення другого за величиною елемента цієї послідовності.
+Числа, що йдуть за числом 0, зчитувати не потрібно.
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Name {
+
+	public static void main(String[] args) throws NumberFormatException, IOException{
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int first_max = Integer.parseInt(reader.readLine());
+        int second_max = Integer.parseInt(reader.readLine());
+        if (first_max < second_max) {
+        	first_max=second_max;
+        int element = Integer.parseInt(reader.readLine());
+        while (element != 0) {
+        	if (element > first_max) 
+                second_max=first_max;
+        	else if (element > second_max) 
+                second_max = element;
+            element = Integer.parseInt(reader.readLine());
+        	
+        }
+        }
+            		System.out.println(second_max);
+#Завдання 19. Другий максимум – 2
+#Послідовність складається з натуральних чисел і завершується числом 0. Визначте значення другого за величиною елемента цієї послідовності, тобто елемента, який буде найбільшим, якщо з
+послідовності видалити найбільший елемент. Числа, що йдуть за числом 0, зчитувати не потрібно.
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Name {
+
+	public static void main(String[] args) throws NumberFormatException, IOException{
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		int i=1; int max1, max2;
+		max1=Integer.parseInt(reader.readLine());
+		max2=Integer.parseInt(reader.readLine());
+        if (max2>max1) {
+        	 i=max1; max1=max2; max2=i;
+        }
+        while (i!=0) {
+        	i=Integer.parseInt(reader.readLine());
+        	if (i>=max1) {
+        		max2=max1; max1=i;
+        	}else if (i>max2) {
+               max2=i;
+        }
+        }
+            		System.out.println(max2);
+#Завдання 20. Кількість елементів, рівних максимуму
+#Послідовність складається з натуральних чисел і завершується числом 0. Усього вводиться трохи більше 10000 чисел (крім завершального числа 0). Визначте, скільки елементів цієї послідовності
+дорівнюють її найбільшому елементу. Числа, що йдуть за числом 0, зчитувати не потрібно.
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Name {
+
+	public static void main(String[] args) throws NumberFormatException, IOException{
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		int a; int max; int count=0;
+		a=Integer.parseInt(reader.readLine());
+		max=a;
+        while (a!=0) {
+        	a=Integer.parseInt(reader.readLine());
+        	if (a==max && a>max) 
+        		max=a;
+        		count=1;	       	
+        }
+            		System.out.println(count);
+#Завдання 21. Кількість елементів, рівних максимуму(така сама як 20)
+#Завдання 22. Сума послідовності - 2
+#Знайдіть суму послідовності натуральних чисел, якщо ознакою закінчення кінця послідовності є два поспіль числа 0, що йдуть.
+Числа, що йдуть після двох поспіль нулів, зчитувати не потрібно.
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Name {
+
+	public static void main(String[] args) throws NumberFormatException, IOException{
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int num = 1;
+        int sum = 0;
+        int nold;
+        nold=num; 
+        boolean doIt = true;
+        while (doIt) {
+        int n = Integer.parseInt(reader.readLine());
+        num +=1;
+        sum +=n;
+        if (n == 0 && nold==0)
+        doIt = false;
+        }
+        System.out.println(sum);
+#Завдання 23. Максимальна кількість рівних елементів, що йдуть підряд
+#Дана послідовність натуральних чисел, що завершується числом 0. Визначте, яке найбільше число елементів, що йдуть, цієї послідовності рівні один одному.
+Числа, що йдуть за числом 0, зчитувати не потрібно.
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Name {
+
+	public static void main(String[] args) throws NumberFormatException, IOException{
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int a=Integer.parseInt(reader.readLine());
+        int max1=1; int max2=1;
+        boolean doIt = true;
+        while (doIt) {
+        int b = Integer.parseInt(reader.readLine());
+            if(a == 0) 
+            	doIt = false;
+            	 max1 += 1;
+            
+            if (max1 > max2) 
+                max2 = max1;
+            a = b;
+            max1 = 1;
+            }            
+        System.out.println(max2);
+#Завдання 24. Максимальна довжина монотонного фрагмента
+#Дана послідовність натуральних чисел, що завершується число 0. Визначте найбільшу довжину монотонного фрагмента послідовності (тобто такого фрагмента, де всі елементи або більші за
+попередні, або менші).
+Числа, що йдуть за числом 0, зчитувати не потрібно.
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Name {
+
+	public static void main(String[] args) throws NumberFormatException, IOException{
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		int Length = 0;
+        int highLength = 0;
+        int b = Integer.parseInt(reader.readLine());
+        int a = b;
+        do {
+            b = Integer.parseInt(reader.readLine());
+            if (a == b)
+                Length++;
+            else Length = 0;
+            if (Length > highLength)
+                highLength = Length;
+            a = b;
+        } while (b > 0);
+        if (highLength != 0)
+            highLength++;
+        System.out.printf("Найбільша довжина монотонного фрагмента послідовності = " + highLength);
+#Завдання 25. Кількість локальних максимумів
+#Елемент послідовності називається локальним максимумом, якщо він строго більший за попередній і наступний елемент послідовності. Перший і останній елемент послідовності є
+локальними максимумами.
+Дано послідовність натуральних чисел, ознакою кінця якої є число 0. Визначте кількість суворих локальних максимумів у цій послідовності.
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Name {
+
+	public static void main(String[] args) throws NumberFormatException, IOException{
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		int k=0; int n=0;
+        int x = Integer.parseInt(reader.readLine());
+        int y = Integer.parseInt(reader.readLine());
+        y=x;
+        do {
+            n = Integer.parseInt(reader.readLine());
+            if (x>n && x>y)
+                k++;
+            y=x;
+            x=n;
+        } while (n!=0);
+        k++;
+        System.out.println(k);
+#Завдання 26. Найменша відстань між локальними максимумами
+#Визначте найменшу відстань між двома локальними максимумами послідовності натуральних чисел, що завершується числом 0. Якщо послідовність не має двох локальних максимумів,
+виведіть число 0.
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Name {
+
+	public static void main(String[] args) throws NumberFormatException, IOException{
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		int k=0; int n=0; int m=0;
+        int x = Integer.parseInt(reader.readLine());
+        int y = Integer.parseInt(reader.readLine());
+        int z=Integer.parseInt(reader.readLine());
+        y=x;
+        do {
+            k++;
+            if (y>z && x<y) {
+                n++;
+                if(n>1 && n>2 && k<m)
+                m=k;
+                k=0;
+            }
+            x=y;
+            y=z;
+        z=Integer.parseInt(reader.readLine());    
+        } while (n!=0);
+        System.out.println(m);
